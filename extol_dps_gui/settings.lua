@@ -41,6 +41,26 @@ mod_settings =
 				value_max = 1000,
 				scope = MOD_SETTING_SCOPE_RUNTIME,
 			},
+			{
+				id = "extol_dps_gui_res",
+				ui_name = "GUI Resolution",
+				ui_description = "If you have changed your gui resolution in the config.xml set this to the X size. DEFAULT VALUE: 1280",
+				value_default = "1280",
+				text_max_length = 5,
+				allowed_characters = "0123456789",
+				scope = MOD_SETTING_SCOPE_RUNTIME,
+			},
+			{
+				id = "extol_dps_alpha",
+				ui_name = "GUI Alpha",
+				ui_description = "Opacity of GUI",
+				value_default = 0.9,
+				value_display_multiplier = 100,
+				value_display_formatting = " $0%",
+				value_min = 0.1,
+				value_max = 1,
+				scope = MOD_SETTING_SCOPE_RUNTIME,
+			},
 		}
 	}
 }

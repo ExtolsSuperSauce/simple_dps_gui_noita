@@ -5,6 +5,8 @@ function shot(projectile)
 	local vsc_id = EntityGetFirstComponentIncludingDisabled( eid, "VariableStorageComponent", "EXTOL_DPS_STORAGE" )
 	if ComponentGetValue2(vsc_id, "value_bool") == true then
 		ComponentSetValue2( vsc_id, "value_bool", false )
+		local old_dps = ComponentGetValue2( vsc_id, "value_float" )
+		ComponentSetValue2( vsc_id, "value_int", old_dps )
 		ComponentSetValue2( vsc_id, "value_float", 0 )
 	end
 	local pc_ids = EntityGetComponent(projectile, "ProjectileComponent")
